@@ -1,7 +1,15 @@
 <script>
+    import image1 from './assets/image1.png'
+    import image2 from './assets/image2.png'
 
     export default {
-        name: 'App'
+        data: function() {
+            return {
+                image1: image1,
+                image2: image2,
+                selected: ''
+            }
+        }
   
     }
 
@@ -9,29 +17,29 @@
 
 <template>
     <div class="flex md:flex-row-reverse">
-        <div class="py-18 w-full md:w-3/4 p-7 bg-scroll bg-sky-500 font-medium text-sm text-black">
-            <ul class="flex justify-end space-x-7 pr-32 pt-6">
-                <li>Home</li>
-                <li>Borrower</li>
-                <li>Lender</li>
-                <li>About Us</li>
-                <li>FAQ</li>
+        <div class="w-full md:w-3/4 bg-scroll bg-white font-medium text-sm text-black pb-12">
+            <ul class="flex justify-end space-x-7 pr-32 pt-12">
+                <li class="cursor-pointer hover:text-gray-600">Home</li>
+                <li class="cursor-pointer hover:text-gray-600">Borrower</li>
+                <li class="cursor-pointer hover:text-gray-600">Lender</li>
+                <li class="cursor-pointer hover:text-gray-600">About Us</li>
+                <li class="cursor-pointer hover:text-gray-600">FAQ</li>
                 <li>|</li>
-                <li class="space-x-2"><font-awesome-icon icon="fa-solid fa-store" /><span>Easywarung</span></li>
-                <label for="togglesix" class="flex items-center cursor-pointer select-none">
-                    <div class="relative">
-                        <input type="checkbox" id="toggleSix" class="sr-only">
-                        <div class="box block bg-primary w-14 h-8 rounded-full"></div>
-                        <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition flex items-center justify-center"></div>
-                    </div>
-                </label>
+                <li class="space-x-2 cursor-pointer hover:text-gray-600"><font-awesome-icon icon="fa-solid fa-store" /><span>Easywarung</span></li>
+                <span class="hidden">{{ selected }}</span>
+                <div class="border-2 border-black px-1 py-1 rounded">
+                    <select class="appearance-none" v-model="selected">
+                        <option>IN</option>
+                        <option>EN</option>
+                    </select>
+                </div>
             </ul>
         </div>
-        <div class="w-full md:w-1/4 bg-gray-400 p-16 text-gray-700 pl-32">
-            <ul>
-                <li>logo</li>
-            </ul>
+        <div class="w-full md:w-1/4 bg-white text-black pt-9 pl-32">
+            <div class="flex flex-row items-center space-x-1">
+                <img class="h-11 w-17" :src="image1"/>
+                <img class="h-7 w-25" :src="image2"/>
+            </div>
         </div>
     </div>
-
 </template>

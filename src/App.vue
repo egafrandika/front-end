@@ -1,10 +1,13 @@
 <script>
+
 import Navbar from "./components/navigation.vue";
+import Home from "./components/home.vue";
 
 export default {
   name: "App",
   components: {
     Navbar,
+    Home
   },
 };
 
@@ -14,6 +17,8 @@ export default {
 
     <div id="app">
       <Navbar/>
+      <Home />
+      <Option />
     </div>
 
 </template>
