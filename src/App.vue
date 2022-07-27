@@ -18,7 +18,6 @@ export default {
     <div id="app">
       <Navbar/>
       <Home />
-      <Option />
     </div>
 
 </template>

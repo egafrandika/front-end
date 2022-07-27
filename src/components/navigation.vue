@@ -1,7 +1,7 @@
 <script>
     import image1 from './assets/image1.png'
     import image2 from './assets/image2.png'
-
+    
     export default {
         data: function() {
             return {
@@ -27,7 +27,7 @@
                 <li>|</li>
                 <li class="space-x-2 cursor-pointer hover:text-gray-600"><font-awesome-icon icon="fa-solid fa-store" /><span>Easywarung</span></li>
                 <span class="hidden">{{ selected }}</span>
-                <div class="border-2 border-black px-1 py-1 rounded">
+                <div class="border-2 border-black px-4 py-1 -mt-1 rounded-full">
                     <select class="appearance-none" v-model="selected">
                         <option>IN</option>
                         <option>EN</option>
